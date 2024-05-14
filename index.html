@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Tip calculator app</title>
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="title">
+      <h1>SPLI <br> TTER</h1>
+    </div>
+    <div class="container">
+
+      <div class="form-section">
+        <label for="bill">Bill</label>
+        <div class="bill-input">
+          <div>
+            <img src="/images/icon-dollar.svg" alt="icon-dollar">
+          </div>
+          <div>
+            <input type="tel" id="bill" placeholder="0.00">
+          </div>
+        </div>
+
+        <div class="select-tip-section">
+          <div class="form-action__label">
+            <span>
+              Select Tip %
+            </span>
+          </div>
+          <div class="select-tip__grid">
+            <div class="options">
+              <button>
+                5%
+              </button>
+            </div>
+            <div class="options">
+              <button>
+                10%
+              </button>
+            </div>
+            <div class="options">
+              <button>
+                15%
+              </button>
+            </div>
+            <div class="options">
+              <button>
+                25%
+              </button>
+            </div>
+            <div class="options">
+              <button>
+                50%
+              </button>
+            </div>
+            <div class="options">
+              <input type="tel" id="custom-tip" placeholder="Custom">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="people-input-wrapper">
+          <div class="people-label">
+            <div>
+              <label for="number-of-people">Number of People</label>
+            </div>
+            <div class="error-msg">
+              <span>can't be zero</span>
+            </div>
+          </div>
+          <div class="people-input">
+            <div>
+              <img src="images/icon-person.svg" alt="person icon">
+            </div>
+            <div>
+              <input type=" tel" id="number-of-people" placeholder="0">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="total-section">
+        <div class="amount-total-wrapper">
+          <div class="amount-total-container">
+            <div class="amount-total__label">
+              <span>Tip Amount</span>
+            </div>
+            <div>
+              <span class="amount-total__person">/ person</span>
+            </div>
+          </div>
+          <div>
+            <span class="amount-total">$0.00</span>
+          </div>
+        </div>
+
+        <div class="person-total-wrapper">
+          <div class="person-total-container">
+            <div class="person-total__label">
+              <span>Total</span>
+            </div>
+            <div>
+              <span class="person-total__person">/ person</span>
+            </div>
+          </div>
+          <div>
+            <span class="person-total">$0.00</span>
+          </div>
+        </div>
+        <div class="reset-btn">
+          <button>
+            RESET
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

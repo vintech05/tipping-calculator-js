@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --font: "Space Mono", monospace;
+  --bg-color: hsl(185, 41%, 84%);
+  --text-color: hsl(186, 14%, 43%);
+  --text-color-light: hsl(184, 14%, 56%);
+  --primary-color: hsl(172, 67%, 45%);
+  --white: hsl(0, 0%, 100%);
+  --error: hsl(0, 93%, 68%);
+  --error-light: hsl(0, 93%, 68%, 0.5);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --f-size: 24px;
+  --b-radius: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--f-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+  padding-block: 1rem;
+}
+
+.title h1 {
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.8rem;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-top: 2rem;
+  text-align: left;
+  background-color: var(--white);
+  border-radius: 20px 20px 0 0;
+  font-size: 1.2rem;
+  padding-block: 2rem;
+  font-weight: 700;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+}
+
+.bill-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+  background-color: var(--very-light-grayish-cyan);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.bill-input:active {
+  border: 3px solid var(--primary-color);
+}
+
+.bill-input input {
+  background: none;
+  border: none;
+  outline: none;
+  top: 0;
+  padding-left: 3.5rem;
+  bottom: 0;
+  right: 1rem;
+  position: absolute;
+  font-family: inherit;
+  font-size: var(--f-size);
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: right;
+  width: 100%;
+
+  color: var(--very-dark-cyan);
+}
+
+.form-section label,
+span {
+  font-size: 1rem;
+}
+
+.select-tip__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.select-tip__grid button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: var(--f-size);
+  color: var(--white);
+  font-weight: 700;
+  background-color: var(--very-dark-cyan);
+  width: 100%;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 100ms ease-in-out;
+}
+
+.select-tip__grid button:focus {
+  background-color: var(--primary-color);
+  color: var(--very-dark-cyan);
+}
+
+.select-tip__grid input {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: var(--f-size);
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--very-light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.select-tip__grid input:focus {
+  border: 3px solid var(--primary-color);
+}
+
+.select-tip__grid input::placeholder {
+  color: var(--text-color-light);
+}
+
+.select-tip__grid button:hover {
+  background-color: var(--primary-color);
+  color: var(--very-dark-cyan);
+}
+
+.total-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--very-dark-cyan);
+  width: 92%;
+  padding: 1rem 0;
+  border-radius: var(--b-radius);
+}
+
+.total-section .amount-total-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1.4rem;
+  align-items: center;
+}
+
+.total-section .amount-total__label span {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.amount-total__person {
+  font-size: 1rem;
+}
+
+.amount-total {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.total-section .person-total-wrapper {
+  display: flex;
+  padding-inline: 1.4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-section .person-total__label span {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.person-total__person {
+  font-size: 1rem;
+}
+
+.person-total {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.total-section .reset-btn {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.total-section .reset-btn button {
+  background-color: var(--primary-color);
+  color: var(--very-dark-cyan);
+  border: none;
+  padding: 1rem 2rem;
+  width: 84vw;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.people-input {
+  padding: 1rem;
+  /* width: 100%; */
+  background-color: var(--very-light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  display: flex;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+
+.people-input:active {
+  border: 3px solid var(--primary-color);
+}
+
+.people-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+.people-label .error-msg {
+  color: var(--error);
+  display: none;
+}
+
+.people-input input {
+  background: none;
+  border: none;
+  outline: none;
+  top: 0;
+  bottom: 0;
+  right: 1rem;
+  position: absolute;
+  padding-left: 3.5rem;
+  font-family: inherit;
+  font-size: var(--f-size);
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: right;
+  color: var(--very-dark-cyan);
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .total-section {
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: 60%;
+  }
+
+  .container {
+    border-radius: var(--b-radius);
+    flex-direction: row;
+    padding: 1.5rem;
+  }
+
+  .select-tip__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .total-section {
+    width: 100%;
+  }
+
+  .person-total,
+  .amount-total {
+    font-size: 3rem;
+  }
+
+  .total-section .reset-btn {
+    padding-top: 10rem;
+  }
+
+  .total-section .reset-btn button {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+}
