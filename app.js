@@ -26,8 +26,8 @@ function calculateTip() {
   const bill = parseFloat(billInput.value);
   const tip = parseFloat(customTip.value) / 100; //converts it into percentage by dividing it by 100
   const people = parseFloat(peopleInputValue.value);
-  const tipAmount = (bill * tip) / people;
-  const total = bill / people + tipAmount;
+  const tipAmountPerPerson = (bill * tip) / people;
+  const totalPerPerson = bill / people + tipAmount; // the bill divides by the number of people and adds the tip
 
   tipOptions.forEach((option) => {
     option.addEventListener("click", () => {
@@ -49,8 +49,8 @@ function calculateTip() {
     });
   });
 
-  totalAmount.innerText = "$" + tipAmount.toFixed(2);
-  totalPerson.innerText = "$" + total.toFixed(2);
+  totalAmount.innerText = "$" + tipAmountPerPerson.toFixed(2);
+  totalPerson.innerText = "$" + totalPerPerson.toFixed(2);
 
   if (bill === 0 || people === 0 || isNaN(bill) || isNaN(people)) {
     totalAmount.innerText = "$0.00";
