@@ -27,7 +27,7 @@ function calculateTip() {
   const tip = parseFloat(customTip.value) / 100; //converts it into percentage by dividing it by 100
   const people = parseFloat(peopleInputValue.value);
   const tipAmount = (bill * tip) / people;
-  const total = (bill + tipAmount) / people;
+  const total = bill / people + tipAmount;
 
   tipOptions.forEach((option) => {
     option.addEventListener("click", () => {
